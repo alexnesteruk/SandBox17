@@ -1,8 +1,29 @@
 @use '../modules/colors';
+@use '../modules/typography';
 
 body {
-    color: colors.$red;
-    font-family: ff-serif;
+    color: colors.$gray;
+    font-family: typography.$ff-serif;
     line-height: 1.6;
-    background-color: colors.$accent;
+    background-color: colors.$white;
+}
+
+h1,h2,p{
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+h1{
+  color: colors.$accent;
+  line-height: 1;
+  font-size: 3.125rem;
+
+  span{
+    @include typography.sans-serif($font-size:5.5rem, $color:colors.$accent);
+    display: block;
+  }
+}
+
+h2{
+  @include typography.sans-serif($font-size:2rem);
 }
