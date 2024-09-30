@@ -11,5 +11,6 @@ import {AboutComponent} from "../about/about.component";
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
+  year: number = new Date().getFullYear();
 
 }
