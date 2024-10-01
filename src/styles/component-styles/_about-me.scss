@@ -2,14 +2,25 @@
 
 .about-me{
   @extend %container;
+  @extend %clearfix;
+  margin-top: 3em;
+}
+
+.about-img {
+  max-height: 25em;
+
+  @media(min-width: 42em) {
+    float: left;
+    margin-right: 1em;
+  }
 }
 
 .about-title{
-
+  margin-bottom: 0.25em ;
 }
 
 .about-subtitle{
-
+  margin: 0.5em 0;
 }
 
 @supports (display: grid) {
