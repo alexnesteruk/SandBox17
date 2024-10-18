@@ -1,0 +1,106 @@
+@use '../modules/colors';
+@use '../modules/typography';
+@import '../modules/mixins';
+
+
+.portfolio {
+  text-align: center;
+  background: colors.$dark-gray;
+  padding: 1em 0;
+}
+
+.portfolio-items{
+  display: flex;
+  flex-wrap: wrap;
+  @include container($max-width: 75em);
+}
+
+.portfolio-item{
+  position:relative;
+  overflow: hidden;
+  flex: 1 1 20rem;
+
+  img{
+    display: block;
+    width: 100%;
+  }
+}
+
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+
+  img {
+    display: block;
+  }
+
+  figcaption {
+    position: absolute;
+    top: 100%;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding: 2em;
+    background: rgba(colors.$accent, .5);
+    color: colors.$white;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    transition: top ease-in-out 250ms;
+  }
+
+  &:hover figcaption,
+  &:focus figcaption {
+    top: 0;
+  }
+}
+
+.portfolio-title {
+  color: colors.$white;
+  font-size: 1.8rem;
+  margin-bottom: auto;
+}
+
+.portfolio-description{
+  display: none;
+}
+
+.portfolio-link{
+  color: colors.$white;
+  font-weight: typography.$fw-bold;
+  font-size: 1.1rem;
+  text-decoration: none;
+  border-bottom: 3px solid colors.$white;
+  align-self: flex-start;
+
+  &::after{
+    content: url('../../assets/img/arrow-white.svg');
+    display: inline-block;
+    height: .8em;
+    width: .8em;
+    margin-left: .5em;
+  }
+}
+
+@supports (display: grid){
+  .portfolio-items{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: .1em;
+  }
+
+  .portfolio-item.featured{
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+  }
+
+  .featured{
+    .portfolio-title{
+      font-size: 5rem;
+    }
+    .portfolio-desc{
+      display: block;
+    }
+  }
+}
+
