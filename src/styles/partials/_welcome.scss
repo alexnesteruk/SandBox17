@@ -1,5 +1,7 @@
 @use '../modules/colors';
 @use '../modules/typography';
+@use "../modules/mixins";
+
 
 .welcome{
   background-image: url("../../assets/img/welcome-03.jpg");
@@ -17,10 +19,18 @@
     line-height: 2;
     text-align: center;
 
+    @include mixins.mq{
+      font-size: 3vw;
+    }
+
     span{
       text-indent: typography.$letter-spacing;
       @include typography.sans-serif($font-size:5.5rem, $color:colors.$beige);
       display: block;
+
+      @include mixins.mq{
+        font-size: 9vw;
+      }
     }
 
     &::before,

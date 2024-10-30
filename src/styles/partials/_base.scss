@@ -1,11 +1,17 @@
 @use '../modules/colors';
 @use '../modules/typography';
+@use "../modules/mixins";
 
 body {
     color: colors.$gray;
     font-family: typography.$ff-serif;
     line-height: 1.6;
-    background-color: colors.$white;
+    background: colors.$white;
+    font-size: .875rem;
+
+  @include mixins.mq{
+    font-size: 1.125rem;
+  }
 }
 
 img{
@@ -30,4 +36,8 @@ h1{
 
 h2{
   @include typography.sans-serif($font-size:2rem);
+
+  @include mixins.mq{
+    font-size: 3em;
+    }
 }
