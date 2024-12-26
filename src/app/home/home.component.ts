@@ -18,6 +18,8 @@ export class HomeComponent implements OnInit {
 
   year: number = new Date().getFullYear();
   fileContent=  '';
+  readonly fileUrl = 'https://raw.githubusercontent.com/alexnesteruk/App_Portfolio/master/test-config.json';
+
 
   constructor(private githubService: GithubService) {
   }
@@ -27,8 +29,8 @@ export class HomeComponent implements OnInit {
   }
 
   getFile() {
-    const fileUrl = 'https://raw.githubusercontent.com/alexnesteruk/App_Portfolio/master/test-config.json';
-    this.githubService.getFileContent(fileUrl).subscribe({
+    //const fileUrl = 'https://raw.githubusercontent.com/alexnesteruk/App_Portfolio/master/test-config.json';
+    this.githubService.getFileContent(this.fileUrl).subscribe({
     next:(data) => {
         this.fileContent = data;
         console.log('File content:', this.fileContent);

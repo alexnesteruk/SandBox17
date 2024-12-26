@@ -19,6 +19,7 @@
   position:relative;
   overflow: hidden;
   flex: 1 1 20rem;
+  margin: 0;
 
   img{
     display: block;
@@ -85,8 +86,11 @@
 @supports (display: grid){
   .portfolio-items{
     display:grid;
+    //grid-gap: 1em;
     grid-template-columns: repeat(2,1fr);
-    gap: .1em;
+    @include mq{
+      grid-template-columns: repeat(4,1fr);
+    }
   }
 
   .portfolio-item.featured{
