@@ -20,7 +20,6 @@ export class HomeComponent implements OnInit {
   fileContent=  '';
   readonly fileUrl = 'https://raw.githubusercontent.com/alexnesteruk/App_Portfolio/master/test-config.json';
 
-
   constructor(private githubService: GithubService) {
   }
 
