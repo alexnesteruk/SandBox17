@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {AboutComponent} from "../about/about.component";
 import {GithubService} from "../service/github.service";
 import {HttpClientModule} from "@angular/common/http";
@@ -17,7 +17,7 @@ import {HttpClientModule} from "@angular/common/http";
 export class HomeComponent implements OnInit {
 
   year: number = new Date().getFullYear();
-  fileContent=  '';
+  fileContent = '';
   readonly fileUrl = 'https://raw.githubusercontent.com/alexnesteruk/App_Portfolio/master/test-config.json';
 
   constructor(private githubService: GithubService) {
