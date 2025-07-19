@@ -1,0 +1,24 @@
+<p>tee-times works!</p>
+
+<form [formGroup]="teeTimeForm" (ngSubmit)="searchTeeTimes()">
+  <label for="zip">Enter Zip Code:</label>
+  <input id="zip" formControlName="zip" type="text" required maxlength="10">
+  <button type="submit" [disabled]="loading">Search</button>
+</form>
+
+<div *ngIf="loading">Searching for tee times...</div>
+<div *ngIf="error" class="error">{{ error }}</div>
+
+<div *ngIf="results.length">
+  <h3>Available Tee Times</h3>
+  <ul>
+    <li *ngFor="let course of results">
+      <strong>{{ course.name }}</strong> ({{ course.distance }} miles away)
+      <ul>
+        <li *ngFor="let teeTime of course.teeTimes">
+          {{ teeTime }}
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>

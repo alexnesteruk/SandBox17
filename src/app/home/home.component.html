@@ -8,7 +8,9 @@
   </div>
   <div class="intro-middle">
     <h2>making it happen</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat.</p>
   </div>
   <div class="intro-right">
     <img src="assets/img/welcome-right.jpg" alt="desk with computer screens">
@@ -21,8 +23,11 @@
   <img class="about-img" src="assets/img/self-portrait.png" alt="a picture of joe Portfolio">
   <h1 class="about-title">Alex Nesteruk</h1>
   <h2 class="about-subtitle">Software Engineer</h2>
-  <div class="about-txt">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do  iam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <div class="about-text">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do iam, quis nostrud exercitation ullamco laboris
+      nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+      dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+      deserunt mollit anim id est laborum.</p>
   </div>
 </section>
 
@@ -31,12 +36,12 @@
   <div class="portfolio-items">
 
     <!-- portfolio item 1 -->
-    <figure class="portfolio-item">
+    <figure class="portfolio-item featured">
       <img src="assets/img/portfolio-01.jpg" alt="portfolio item">
       <figcaption>
-        <h2 class="portfolio-title">Project Name</h2>
+        <h2 class="portfolio-title">Tee Times</h2>
         <p class="portfolio-desc">A short description could go here</p>
-        <a href="#" class="portfolio-link">more info</a>
+        <a [routerLink]="['/tee-times']" class="portfolio-link">more info</a>
       </figcaption>
     </figure>
 
@@ -70,15 +75,15 @@
       </figcaption>
     </figure>
 
-    <!-- portfolio item 5 -->
-<!--    <figure class="portfolio-item">-->
-<!--      <img src="assets/img/portfolio-05.jpg" alt="portfolio item">-->
-<!--      <figcaption>-->
-<!--        <h2 class="portfolio-title">Project Name</h2>-->
-<!--        <p class="portfolio-desc">A short description could go here</p>-->
-<!--        <a href="#" class="portfolio-link">more info</a>-->
-<!--      </figcaption>-->
-<!--    </figure>-->
+    <!--     portfolio item 5-->
+    <figure class="portfolio-item">
+      <img src="assets/img/portfolio-05.jpg" alt="portfolio item">
+      <figcaption>
+        <h2 class="portfolio-title">Project Name</h2>
+        <p class="portfolio-desc">A short description could go here</p>
+        <a href="#" class="portfolio-link">more info</a>
+      </figcaption>
+    </figure>
 
 
   </div>
@@ -87,19 +92,19 @@
 <section class="contact">
   <h1>Contact me</h1>
   <form action="">
-    <label for="name">Name:
+    <label for="name" class="name">Name:
       <input type="text" id="name" placeholder="Enter your name">
     </label>
 
-    <label for="email">Email:
+    <label for="email" class="email">Email:
       <input type="text" id="email" placeholder="Enter your email">
     </label>
 
-    <label for="message">Message:
+    <label for="message" class="message">Message:
       <textarea id="message" placeholder="Enter your message"></textarea>
     </label>
 
-    <input class="button" type="submit" value="SEND">
+    <input class="button form-button" type="submit" value="SEND">
 
   </form>
 </section>
@@ -113,5 +118,5 @@
 
   </div>
 
-  <p class="copyright">Copyright {{year}} Alex Nesteruk</p>
+  <p class="copyright">Copyright {{ year }} Alex Nesteruk</p>
 </footer>

@@ -28,6 +28,10 @@ h1{
   line-height: 1;
   font-size: 3.125rem;
 
+  @include mixins.mq{
+    font-size: 3.45rem !important;
+  }
+
   span{
     @include typography.sans-serif($font-size:5.5rem, $color:colors.$light-beige);
     display: block;
