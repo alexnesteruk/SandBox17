@@ -3,38 +3,39 @@
 @use "../modules/mixins";
 
 
-.welcome{
+.welcome {
   background-image: url("../../assets/img/welcome-03.jpg");
   background-size: cover;
-  background-position:center;
+  background-position: center;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 
-  h1{
+  h1 {
     font-size: 1.5rem;
     font-weight: normal;
     color: colors.$dark-gray;
     line-height: 2;
     text-align: center;
 
-    @include mixins.mq{
+    @include mixins.mq {
       font-size: 3vw;
     }
 
-    span{
+    span {
       text-indent: typography.$letter-spacing;
-      @include typography.sans-serif($font-size:5.5rem, $color:colors.$beige);
+      @include typography.sans-serif($font-size: 5.5rem, $color: colors.$beige);
       display: block;
 
-      @include mixins.mq{
+      @include mixins.mq {
         font-size: 9vw;
       }
     }
 
     &::before,
-    &::after{
+    &::after {
       content: '';
       display: block;
       width: 60%;
@@ -42,12 +43,12 @@
       background: colors.$dark-gray;
     }
 
-    &::before{
+    &::before {
       margin: 0 auto 2em;
     }
 
-    &::after{
-      background: colors.$light-gray ;
+    &::after {
+      background: colors.$light-gray;
       margin: 2em auto 0;
     }
 

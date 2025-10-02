@@ -1,18 +1,16 @@
 import {Component, OnInit} from '@angular/core';
-import {AboutComponent} from "../about/about.component";
 import {GithubService} from "../service/github.service";
 import {HttpClientModule} from "@angular/common/http";
-import {TeeTimesComponent} from "../tee-times/tee-times.component";
 import {RouterLink} from "@angular/router";
+import {NgOptimizedImage} from "@angular/common";
 
 @Component({
   selector: 'app-home',
   standalone: true,
   imports: [
-    AboutComponent,
     HttpClientModule,
-    TeeTimesComponent,
-    RouterLink
+    RouterLink,
+    NgOptimizedImage
   ],
   providers: [GithubService],
   templateUrl: './home.component.html',
