@@ -1,13 +1,11 @@
 import {Component, OnInit} from '@angular/core';
 import {GithubService} from "../service/github.service";
-import {HttpClientModule} from "@angular/common/http";
 import {RouterLink} from "@angular/router";
 
 @Component({
   selector: 'app-home',
   standalone: true,
   imports: [
-    HttpClientModule,
     RouterLink,
   ],
   providers: [GithubService],
