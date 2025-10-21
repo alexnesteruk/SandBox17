@@ -2,7 +2,6 @@ import {Component, OnInit} from '@angular/core';
 import {GithubService} from "../service/github.service";
 import {HttpClientModule} from "@angular/common/http";
 import {RouterLink} from "@angular/router";
-import {NgOptimizedImage} from "@angular/common";
 
 @Component({
   selector: 'app-home',
@@ -10,7 +9,6 @@ import {NgOptimizedImage} from "@angular/common";
   imports: [
     HttpClientModule,
     RouterLink,
-    NgOptimizedImage
   ],
   providers: [GithubService],
   templateUrl: './home.component.html',
