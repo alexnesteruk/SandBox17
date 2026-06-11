@@ -5,7 +5,7 @@ Load this reference only when you need concrete examples during implementation.
 ## Dependency Cache
 
 ```yaml
-- uses: actions/cache@v4
+- uses: actions/cache@<FULL_LENGTH_COMMIT_SHA> # v4
   with:
     path: ~/.npm
     key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
