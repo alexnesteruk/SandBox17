@@ -1,10 +1,12 @@
 import {booleanAttribute, Component, EventEmitter, Input, Output} from '@angular/core';
 import {animate, state, style, transition, trigger} from '@angular/animations';
 
+import {NgClass, NgIf, NgStyle} from '@angular/common';
+
 @Component({
   selector: 'app-slide-out-nav',
   standalone: true,
-  imports: [],
+  imports: [NgIf, NgClass, NgStyle],
   templateUrl: './slide-out-nav.component.html',
   styleUrl: './slide-out-nav.component.scss',
   animations: [
