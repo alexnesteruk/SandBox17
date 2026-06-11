@@ -1,38 +1,30 @@
-<!--<button-->
-<!--  class="slideout-hamburger"-->
-<!--  aria-label="Open navigation menu"-->
-<!--  *ngIf="!isOpen"-->
-<!--  (click)="close.emit()"-->
-<!--&gt;-->
-<!--  <span></span><span></span><span></span>-->
-<!--</button>-->
-<!--<div-->
-<!--  class="slideout-backdrop"-->
-<!--  *ngIf="isOpen"-->
-<!--  (click)="onBackdropClick()"-->
-<!--  tabindex="-1"-->
-<!--  aria-hidden="true"-->
-<!--&gt;</div>-->
-<!--<aside-->
-<!--  class="slideout-drawer {{ className || '' }}"-->
-<!--  [ngClass]="position"-->
-<!--  [@slideDrawer]="animationState"-->
-<!--  [ngStyle]="{-->
-<!--    width: position === 'left' || position === 'right' ? width : '100vw',-->
-<!--    height: position === 'top' || position === 'bottom' ? height : '100vh'-->
-<!--  }"-->
-<!--  role="dialog"-->
-<!--  aria-modal="true"-->
-<!--  tabindex="-1"-->
-<!--&gt;-->
-<!--  <button-->
-<!--    class="slideout-close"-->
-<!--    aria-label="Close navigation menu"-->
-<!--    (click)="onHamburgerClick()"-->
-<!--    *ngIf="isOpen"-->
-<!--  >-->
-<!--    &times;-->
-<!--  </button>-->
-<!--  <ng-content></ng-content>-->
-<!--</aside>-->
+<div
+  class="slideout-backdrop"
+  *ngIf="isOpen"
+  (click)="onBackdropClick()"
+  tabindex="-1"
+  aria-hidden="true"
+></div>
+<aside
+  class="slideout-drawer {{ className || '' }}"
+  [ngClass]="position"
+  [@slideDrawer]="animationState"
+  [ngStyle]="{
+    width: position === 'left' || position === 'right' ? width : '100vw',
+    height: position === 'top' || position === 'bottom' ? height : '100vh'
+  }"
+  role="dialog"
+  aria-modal="true"
+  tabindex="-1"
+>
+  <button
+    class="slideout-close"
+    aria-label="Close navigation menu"
+    (click)="onHamburgerClick()"
+    *ngIf="isOpen"
+  >
+    &times;
+  </button>
+  <ng-content></ng-content>
+</aside>
 

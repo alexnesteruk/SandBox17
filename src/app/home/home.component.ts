@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, Output, EventEmitter} from '@angular/core';
 import {GithubService} from "../service/github.service";
 import {RouterLink} from "@angular/router";
 
@@ -18,11 +18,17 @@ export class HomeComponent implements OnInit {
   fileContent = '';
   readonly fileUrl = 'https://raw.githubusercontent.com/alexnesteruk/App_Portfolio/master/test-config.json';
 
+  @Output() toggleMenuRequested = new EventEmitter<void>();
+
   constructor(private githubService: GithubService) {
   }
 
   ngOnInit() {
     this.getFile();
+  }
+
+  onMenuButtonClick() {
+    this.toggleMenuRequested.emit();
   }
 
   getFile() {

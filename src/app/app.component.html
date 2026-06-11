@@ -1,2 +1,15 @@
+<!-- Slide-out navigation component -->
+<app-slide-out-nav [isOpen]="isMenuOpen" (close)="toggleMenu()">
+  <nav>
+    <ul>
+      <li><a routerLink="/" (click)="toggleMenu()">Home</a></li>
+      <li><a routerLink="/about" (click)="toggleMenu()">About</a></li>
+      <li><a routerLink="/tee-times" (click)="toggleMenu()">Tee Times</a></li>
+    </ul>
+  </nav>
+</app-slide-out-nav>
 
-<router-outlet />
+<!-- Main content area -->
+<main class="main-content">
+  <router-outlet (activate)="onRouteActivated($event)" />
+</main>
